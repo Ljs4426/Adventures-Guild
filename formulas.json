@@ -1,0 +1,22 @@
+{
+  "Quests": {
+    "Quest ID": "=IF(ROW()=1,\"Quest ID\",\"Q-\"&TEXT(ROW()-1,\"0000\"))",
+    "False Rank Probability": "=IF(G{row}=\"Pending Review\",\"TBD\",IF(G{row}=\"\",\"\",IF(F{row}=\"Guild\",VLOOKUP(D{row},Config!$A$12:$B$17,2,FALSE)*Config!$B$2,VLOOKUP(D{row},Config!$A$12:$B$17,2,FALSE)*Config!$B$3)))",
+    "Deadline": "=IF(L{row}=\"\",\"\",L{row}+Config!$B$17)"
+  },
+  "Users": {
+    "Completed Quests #": "=IF(G{row}=\"\",\"0\",COUNTA(SPLIT(G{row},\",\")))",
+    "Rank": "=IF(H{row}<Config!$B$5,\"F\",IF(H{row}<Config!$B$6,\"E\",IF(H{row}<Config!$B$7,\"D\",IF(H{row}<Config!$B$8,\"C\",IF(H{row}<Config!$B$9,\"B\",\"A\")))))",
+    "Completion Rate": "=IF(F{row}+L{row}=0,\"N/A\",TEXT(F{row}/(F{row}+L{row}),\"0%\"))"
+  },
+  "Parties": {
+    "Party ID": "=IF(ROW()=1,\"Party ID\",\"P-\"&TEXT(ROW()-1,\"0000\"))",
+    "Member Count": "=IF(E{row}=\"\",0,COUNTA(SPLIT(E{row},\",\")))",
+    "Completed Quests #": "=IF(I{row}=\"\",\"0\",COUNTA(SPLIT(I{row},\",\")))",
+    "Completion Rate": "=IF(H{row}+N{row}=0,\"N/A\",TEXT(H{row}/(H{row}+N{row}),\"0%\"))"
+  },
+  "Party Invites": {
+    "Invite ID": "=IF(ROW()=1,\"Invite ID\",\"I-\"&TEXT(ROW()-1,\"0000\"))",
+    "Expiry Date": "=IF(G{row}=\"\",\"\",G{row}+(Config!$B$31/24))"
+  }
+}

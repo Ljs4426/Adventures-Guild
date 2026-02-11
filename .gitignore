@@ -1,0 +1,156 @@
+# ==========================================
+# CRITICAL - NEVER COMMIT THESE
+# ==========================================
+
+# Environment variables (contains bot token, API keys, etc.)
+.env
+.env.local
+.env.*.local
+
+# Google Sheets API credentials (contains service account private key)
+credentials.json
+*-credentials.json
+service-account*.json
+
+# ==========================================
+# Python
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Database backups
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# ==========================================
+# Discord Bot Specific
+# ==========================================
+
+# Bot token file (if you store it separately)
+token.txt
+bot_token.txt
+
+# Any backup or test data
+*_backup.*
+test_data/
+
+# ==========================================
+# OS Specific
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# Project Specific
+# ==========================================
+
+# Any local configuration overrides
+config.local.py
+settings.local.py
+
+# Any downloaded/generated data files
+data/
+downloads/
+outputs/
+
+# Documentation builds
+docs/_build/
+site/
